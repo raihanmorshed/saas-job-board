@@ -12,7 +12,39 @@ function getJobs() {
 }
 
 function showJobs(jobs) {
-    console.log("Jobs in showJobs", jobs);
+    console.log(jobs);
+    let jobsContainer = document.querySelector(".jobs-container");
+    // console.log(jobsContainer);
+    let jobsHTML = "";
+    jobs.forEach(job => {
+        // console.log(job);
+
+        jobsHTML += `
+        <div class="job-title">
+        <div class="top">
+        <img src="${job.logo}" />
+        //    <i class="fa-solid fa-swatchbook"></i>
+           <span class="material-icons more_horiz"> more_horiz</span>
+        </div>
+        <div class="rolename">
+            <span>${job.roleName}</span>
+        </div>
+        <div class="description">
+            <span> ${job.requirements.content}</span>
+        </div>
+        <div class="buttons">
+            <div class="button apply-no w">
+                Apply Now
+            </div>
+            <div class="button">
+                Message
+            </div>
+        </div>
+    </div>
+   
+   `
+    });
+    console.log(jobsHTML);
 }
 
 
