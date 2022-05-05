@@ -1,6 +1,13 @@
 document.querySelector(".button-container").addEventListener("click", () => {
     let text = document.getElementById("filter-jobs").value;
     //console.log(text);
+    getJobs().then(jobs => {
+       let filteredJobs =  filterJobs(jobs, text);
+       showJobs(filteredJobs)
+    //    console.log(filteredJobs);
+
+
+    })
 })
 
 function getJobs() {
