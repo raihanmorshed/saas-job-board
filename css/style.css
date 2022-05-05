@@ -140,9 +140,10 @@ header {
     justify-content: space-between;
 }
 
-.top i {
+.top img {
     width: 30px;
     height: 20px;
+    border-radius:10px;
 }
 
 .rolename {
@@ -158,11 +159,11 @@ header {
     overflow:hidden;
     font-size:18px;
     color:#96939B;
+    /* flex-grow:1; */
 }
 
 .buttons {
-    
-    color: black;
+    color: #3060FF;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
